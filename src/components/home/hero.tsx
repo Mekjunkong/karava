@@ -31,7 +31,7 @@ export function Hero() {
               {t("cta")}
             </Link>
             <a
-              href="tel:0XXXXXXXX"
+              href="tel:+66929894495"
               className="inline-flex items-center gap-2 rounded-lg border border-muted/20 px-6 py-3.5 text-muted hover:text-primary hover:border-muted/40 transition-colors"
             >
               <Phone size={18} />

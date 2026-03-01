@@ -51,7 +51,7 @@ export default function ContactPage() {
                       {t("info.phone")}
                     </h3>
                     <a
-                      href="tel:0XXXXXXXX"
+                      href="tel:+66929894495"
                       className="text-secondary hover:text-secondary-light transition-colors"
                     >
                       {t("info.phoneNumber")}

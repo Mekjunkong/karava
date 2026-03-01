@@ -108,7 +108,7 @@ export function localBusinessJsonLd() {
     alternateName: "Karava Funeral Services",
     description: "บริการจัดงานศพครบวงจร เชียงใหม่ รองรับทุกศาสนาและประเพณี",
     url: siteUrl,
-    telephone: "+66-XX-XXX-XXXX",
+    telephone: "+66929894495",
     email: "info@karava.co.th",
     address: {
       "@type": "PostalAddress",

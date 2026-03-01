@@ -18,7 +18,7 @@ export function InquiryCta() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="tel:0XXXXXXXX"
+              href="tel:+66929894495"
               className="inline-flex items-center gap-2 rounded-lg bg-secondary px-6 py-3 text-white font-medium hover:bg-secondary-light transition-colors"
             >
               <Phone size={18} />

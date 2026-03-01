@@ -62,7 +62,7 @@ export function InquiryForm() {
           label={`${t("phone")} *`}
           type="tel"
           required
-          placeholder="0XX-XXX-XXXX"
+          placeholder="092-989-4495"
         />
       </div>
 
