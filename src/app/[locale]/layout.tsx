@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { localBusinessJsonLd } from "@/lib/seo";
 import "../globals.css";
 
 const sarabun = Sarabun({
@@ -23,9 +24,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "คารวะ | บริการจัดงานศพครบวงจร เชียงใหม่",
+  title: {
+    template: "%s | คารวะ (Karava)",
+    default: "คารวะ | บริการจัดงานศพครบวงจร เชียงใหม่",
+  },
   description:
     "บริการจัดงานศพครบวงจร เชียงใหม่ รองรับทุกศาสนาและประเพณี ดูแลทุกพิธีด้วยความเคารพ",
+  metadataBase: new URL("https://karava.co.th"),
+  openGraph: {
+    type: "website",
+    siteName: "Karava (คารวะ)",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Karava - คารวะ - บริการจัดงานศพ เชียงใหม่",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default async function LocaleLayout({
@@ -45,6 +66,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${sarabun.variable} ${inter.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd()),
+          }}
+        />
+      </head>
       <body className="font-sarabun antialiased bg-background text-primary min-h-screen">
         <NextIntlClientProvider messages={messages}>
           <Header />

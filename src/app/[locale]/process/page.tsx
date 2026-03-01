@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { generatePageMetadata } from "@/lib/seo";
 import {
   MessageCircle, Building, Truck, Package, Droplets, Flower2,
   BookOpen, Music, Sun, Flame, Gem, Waves, Heart,
@@ -9,6 +11,15 @@ const stepIcons = [
   MessageCircle, Building, Truck, Package, Droplets, Flower2,
   BookOpen, Music, Sun, Flame, Gem, Waves, Heart,
 ];
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generatePageMetadata("process", locale);
+}
 
 export default function ProcessPage() {
   const t = useTranslations("process");
