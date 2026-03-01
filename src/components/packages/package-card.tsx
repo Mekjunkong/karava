@@ -5,6 +5,14 @@ import { Badge } from "@/components/ui/badge";
 import { formatPrice, getLocalizedField } from "@/lib/utils";
 import type { Package } from "@/lib/database.types";
 import { ArrowRight, Moon } from "lucide-react";
+import Image from "next/image";
+
+const packageImages: Record<string, string> = {
+  basic: "/images/lotus-white.jpg",
+  standard: "/images/temple-gold.jpg",
+  premium: "/images/buddha-gold.jpg",
+  custom: "/images/ceremony.jpg",
+};
 
 export function PackageCard({ pkg }: { pkg: Package }) {
   const t = useTranslations("packages");
@@ -12,15 +20,30 @@ export function PackageCard({ pkg }: { pkg: Package }) {
 
   const isRecommended = pkg.slug === "standard";
 
+  const imageUrl = packageImages[pkg.slug];
+
   return (
     <Card
-      className={`flex flex-col h-full card-gold-top transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+      className={`group flex flex-col h-full card-gold-top transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden ${
         isRecommended
           ? "border-secondary shadow-gold"
           : "hover:border-secondary/30"
       }`}
     >
-      <CardContent className="flex flex-col flex-1 p-6 pt-8">
+      {/* Package photo */}
+      {imageUrl && (
+        <div className="relative aspect-[16/9] overflow-hidden">
+          <Image
+            src={imageUrl}
+            alt={getLocalizedField(pkg, "name", locale)}
+            fill
+            className="object-cover photo-zoom group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+        </div>
+      )}
+      <CardContent className="flex flex-col flex-1 p-6 pt-6">
         {/* Most Popular badge */}
         {isRecommended && (
           <div className="mb-4">

@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     siteName: "Karava (คารวะ)",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "/images/hero-temple.jpg",
+        width: 1920,
+        height: 1440,
         alt: "Karava - คารวะ - บริการจัดงานศพ เชียงใหม่",
       },
     ],

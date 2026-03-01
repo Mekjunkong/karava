@@ -4,17 +4,31 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Phone } from "lucide-react";
 import { motion } from "@/components/ui/motion";
+import Image from "next/image";
 
 export function Hero() {
   const t = useTranslations("hero");
 
   return (
     <section className="relative overflow-hidden min-h-[80vh] flex items-center">
-      {/* Dark gradient overlay background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary/80" />
+      {/* Background photo with slow zoom animation */}
+      <div className="absolute inset-0 animate-hero-zoom">
+        <Image
+          src="/images/hero-temple.jpg"
+          alt="Thai golden temple"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+          quality={85}
+        />
+      </div>
+
+      {/* Dark gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/70" />
 
       {/* Subtle pattern texture */}
-      <div className="absolute inset-0 bg-pattern opacity-40" />
+      <div className="absolute inset-0 bg-pattern opacity-30" />
 
       {/* Decorative radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl" />

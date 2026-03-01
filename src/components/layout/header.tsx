@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LanguageToggle } from "./language-toggle";
+import { Logo } from "@/components/ui/logo";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -42,13 +43,9 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5">
-            <span className="font-serif text-2xl font-bold text-primary tracking-wide">
-              คารวะ
-            </span>
-            <span className="hidden sm:inline text-[10px] text-muted font-medium tracking-[0.25em] uppercase">
-              Karava
-            </span>
+          <Link href="/" className="flex items-center">
+            <Logo variant="full" color="dark" className="hidden sm:inline-flex" />
+            <Logo variant="icon" color="gold" className="sm:hidden" />
           </Link>
 
           {/* Desktop Navigation */}

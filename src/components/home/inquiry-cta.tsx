@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Phone, MessageCircle } from "lucide-react";
 import { FadeIn } from "@/components/ui/motion";
+import Image from "next/image";
 
 export function InquiryCta() {
   const t = useTranslations("inquiryCta");
@@ -13,11 +14,22 @@ export function InquiryCta() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="relative rounded-2xl bg-primary overflow-hidden">
+            {/* Background photo */}
+            <div className="absolute inset-0">
+              <Image
+                src="/images/serene-light.jpg"
+                alt="Peaceful sunlight through trees"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+            </div>
+
+            {/* Dark overlay for readability */}
+            <div className="absolute inset-0 bg-primary/80" />
+
             {/* Subtle gold gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-secondary/10" />
-
-            {/* Pattern texture */}
-            <div className="absolute inset-0 bg-pattern opacity-30" />
 
             {/* Decorative corner accents */}
             <div className="absolute top-0 left-0 w-24 h-24 border-t border-l border-secondary/20 rounded-tl-2xl" />

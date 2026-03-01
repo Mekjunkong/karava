@@ -7,6 +7,7 @@ import { formatPrice, getLocalizedField } from "@/lib/utils";
 import type { Package } from "@/lib/database.types";
 import { ArrowRight } from "lucide-react";
 import { FadeIn, FadeInStagger, StaggerItem } from "@/components/ui/motion";
+import Image from "next/image";
 
 // Fallback data for when DB is not connected
 const fallbackPackages: Package[] = [
@@ -48,6 +49,14 @@ export function PackagesOverview({ packages }: { packages?: Package[] }) {
   // Standard package (index 1) is the recommended one
   const recommendedSlug = "standard";
 
+  // Map package slugs to photos
+  const packageImages: Record<string, string> = {
+    basic: "/images/lotus-white.jpg",
+    standard: "/images/temple-gold.jpg",
+    premium: "/images/buddha-gold.jpg",
+    custom: "/images/ceremony.jpg",
+  };
+
   return (
     <section className="py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -67,7 +76,7 @@ export function PackagesOverview({ packages }: { packages?: Package[] }) {
             return (
               <StaggerItem
                 key={pkg.id}
-                className={`relative flex flex-col rounded-xl border bg-surface transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                className={`group relative flex flex-col rounded-xl border bg-surface transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden ${
                   isRecommended
                     ? "border-secondary shadow-gold lg:scale-105 lg:z-10"
                     : "border-muted/10 hover:border-secondary/30"
@@ -82,7 +91,21 @@ export function PackagesOverview({ packages }: { packages?: Package[] }) {
                   </div>
                 )}
 
-                <div className="flex flex-col flex-1 p-6 pt-8">
+                {/* Package photo */}
+                {packageImages[pkg.slug] && (
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={packageImages[pkg.slug]}
+                      alt={getLocalizedField(pkg, "name", locale)}
+                      fill
+                      className="object-cover photo-zoom group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                  </div>
+                )}
+
+                <div className="flex flex-col flex-1 p-6 pt-6">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="text-lg font-semibold text-primary">
                       {getLocalizedField(pkg, "name", locale)}

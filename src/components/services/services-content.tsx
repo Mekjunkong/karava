@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { ServiceCard } from "@/components/services/service-card";
 import type { Service } from "@/lib/database.types";
 import { FadeIn, FadeInStagger, StaggerItem } from "@/components/ui/motion";
+import Image from "next/image";
 
 // Fallback data grouped by category
 const fallbackServices: Service[] = [
@@ -28,15 +29,32 @@ export function ServicesContent() {
   const t = useTranslations("services");
 
   return (
-    <div className="py-16 lg:py-24">
+    <div>
+      {/* Header banner with candles photo */}
+      <div className="relative h-[250px] md:h-[340px] overflow-hidden">
+        <Image
+          src="/images/candles.jpg"
+          alt="Candles atmosphere"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+          quality={85}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/75 to-primary/60" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center px-4">
+            <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent mx-auto mb-6" />
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-surface mb-4 tracking-wide">
+              {t("title")}
+            </h1>
+            <p className="text-surface/70 max-w-xl mx-auto text-lg">{t("subtitle")}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <FadeIn className="text-center mb-16">
-          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent mx-auto mb-6" />
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4 tracking-wide">
-            {t("title")}
-          </h1>
-          <p className="text-muted max-w-xl mx-auto text-lg">{t("subtitle")}</p>
-        </FadeIn>
 
         <div className="space-y-12">
           {categories.map((category) => {
@@ -60,6 +78,7 @@ export function ServicesContent() {
             );
           })}
         </div>
+      </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { Logo } from "@/components/ui/logo";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const quickLinks = [
@@ -26,12 +27,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="font-serif text-3xl font-bold text-surface mb-2 tracking-wide">
-              คารวะ
-            </div>
-            <p className="text-[10px] text-surface/40 uppercase tracking-[0.3em] mb-4">
-              Karava
-            </p>
+            <Logo variant="full" color="white" className="mb-4" />
             <p className="text-sm text-surface/50 leading-relaxed">
               {t("tagline")}
             </p>
