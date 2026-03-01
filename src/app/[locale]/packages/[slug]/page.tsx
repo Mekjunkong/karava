@@ -10,6 +10,7 @@ import { PackageInquiryForm } from "@/components/packages/package-inquiry-form";
 import { formatPrice, getLocalizedField } from "@/lib/utils";
 import type { Package } from "@/lib/database.types";
 import { ArrowLeft, Moon, ArrowRight } from "lucide-react";
+import { FadeIn, motion } from "@/components/ui/motion";
 
 // Fallback data
 const allPackages: Package[] = [
@@ -72,63 +73,93 @@ export default function PackageDetailPage() {
   }
 
   return (
-    <div className="py-12 lg:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Back link */}
-        <Link
-          href="/packages"
-          className="inline-flex items-center gap-2 text-muted hover:text-primary text-sm mb-8 transition-colors"
-        >
-          <ArrowLeft size={16} />
-          {tc("back")}
-        </Link>
+    <div>
+      {/* Premium hero banner */}
+      <div className="relative bg-primary overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-secondary/10" />
+        <div className="absolute inset-0 bg-pattern opacity-30" />
 
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          {/* Back link */}
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Link
+              href="/packages"
+              className="inline-flex items-center gap-2 text-surface/50 hover:text-surface text-sm mb-8 transition-colors"
+            >
+              <ArrowLeft size={16} />
+              {tc("back")}
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex items-center gap-3 mb-4"
+          >
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-surface tracking-wide">
+              {getLocalizedField(pkg, "name", locale)}
+            </h1>
+            <Badge variant="secondary">{t(`filter.${pkg.tradition_type}`)}</Badge>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-surface/60 max-w-2xl leading-relaxed text-lg"
+          >
+            {getLocalizedField(pkg, "description", locale)}
+          </motion.p>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-secondary/40 to-transparent" />
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Main content */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Header */}
-            <div>
-              <div className="flex items-center gap-3 mb-3">
-                <h1 className="text-3xl md:text-4xl font-semibold text-primary">
-                  {getLocalizedField(pkg, "name", locale)}
-                </h1>
-                <Badge variant="secondary">{t(`filter.${pkg.tradition_type}`)}</Badge>
-              </div>
-              <p className="text-muted leading-relaxed">
-                {getLocalizedField(pkg, "description", locale)}
-              </p>
-            </div>
-
             {/* Quick facts */}
-            <div className="flex flex-wrap gap-6 py-6 border-y border-muted/10">
-              {pkg.base_price > 0 && (
-                <div>
-                  <span className="text-xs text-muted block">{t("startingAt")}</span>
-                  <span className="text-2xl font-semibold text-secondary">
-                    {formatPrice(pkg.base_price)}
-                  </span>
-                </div>
-              )}
-              {pkg.duration_nights > 0 && (
-                <div className="flex items-center gap-2">
-                  <Moon size={18} className="text-muted" />
+            <FadeIn>
+              <div className="flex flex-wrap gap-8 py-8 border-b border-muted/10">
+                {pkg.base_price > 0 && (
                   <div>
-                    <span className="text-xs text-muted block">{t("nights")}</span>
-                    <span className="font-semibold text-primary">{pkg.duration_nights}</span>
+                    <span className="text-xs text-muted block mb-1">{t("startingAt")}</span>
+                    <span className="font-serif text-3xl font-semibold text-secondary tracking-wide">
+                      {formatPrice(pkg.base_price)}
+                    </span>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+                {pkg.duration_nights > 0 && (
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
+                      <Moon size={18} className="text-secondary" />
+                    </div>
+                    <div>
+                      <span className="text-xs text-muted block">{t("nights")}</span>
+                      <span className="font-semibold text-primary text-lg">{pkg.duration_nights}</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </FadeIn>
 
             {/* Includes */}
-            <PackageIncludes includes={pkg.includes} />
+            <FadeIn delay={0.2}>
+              <PackageIncludes includes={pkg.includes} />
+            </FadeIn>
           </div>
 
-          {/* Sidebar — Inquiry Form */}
-          <div className="lg:col-span-1">
-            <Card className="sticky top-24">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-primary mb-4">
+          {/* Sidebar -- Inquiry Form */}
+          <FadeIn className="lg:col-span-1" delay={0.3}>
+            <Card className="sticky top-24 card-gold-top">
+              <CardContent className="p-6 pt-8">
+                <h3 className="font-serif text-lg font-semibold text-primary mb-4 tracking-wide">
                   {t("inquireAbout")}
                 </h3>
                 <PackageInquiryForm
@@ -136,24 +167,25 @@ export default function PackageDetailPage() {
                 />
               </CardContent>
             </Card>
-          </div>
+          </FadeIn>
         </div>
 
         {/* Related packages */}
         {otherPackages.length > 0 && (
-          <div className="mt-16">
-            <h2 className="text-xl font-semibold text-primary mb-6">
+          <FadeIn className="mt-20" delay={0.2}>
+            <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent mb-8" />
+            <h2 className="font-serif text-xl md:text-2xl font-semibold text-primary mb-8 tracking-wide">
               {t("relatedPackages")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {otherPackages.map((p) => (
-                <Card key={p.id}>
-                  <CardContent className="p-6">
+                <Card key={p.id} className="card-gold-top transition-all duration-300 hover:shadow-lg hover:border-secondary/20">
+                  <CardContent className="p-6 pt-8">
                     <h3 className="font-semibold text-primary mb-1">
                       {getLocalizedField(p, "name", locale)}
                     </h3>
                     {p.base_price > 0 && (
-                      <div className="text-secondary font-medium mb-2">
+                      <div className="font-serif text-lg text-secondary font-medium mb-3">
                         {formatPrice(p.base_price)}
                       </div>
                     )}
@@ -168,7 +200,7 @@ export default function PackageDetailPage() {
                 </Card>
               ))}
             </div>
-          </div>
+          </FadeIn>
         )}
       </div>
     </div>

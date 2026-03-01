@@ -1,8 +1,10 @@
+"use client";
+
 import { useTranslations, useLocale } from "next-intl";
-import { Card, CardContent } from "@/components/ui/card";
 import { getLocalizedField } from "@/lib/utils";
 import type { Testimonial } from "@/lib/database.types";
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
+import { FadeIn, FadeInStagger, StaggerItem } from "@/components/ui/motion";
 
 // Fallback testimonials
 const fallbackTestimonials: Testimonial[] = [
@@ -46,48 +48,63 @@ export function Testimonials({
     testimonials && testimonials.length > 0 ? testimonials : fallbackTestimonials;
 
   return (
-    <section className="py-16 lg:py-24 bg-surface">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-3">
+    <section className="py-20 lg:py-32 bg-surface relative overflow-hidden">
+      <div className="absolute inset-0 bg-pattern opacity-20" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <FadeIn className="text-center mb-16">
+          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent mx-auto mb-6" />
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4 tracking-wide">
             {t("title")}
           </h2>
-          <p className="text-muted max-w-xl mx-auto">{t("subtitle")}</p>
-        </div>
+          <p className="text-muted max-w-xl mx-auto text-lg">{t("subtitle")}</p>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {displayTestimonials.map((item) => (
-            <Card key={item.id} className="relative">
-              <CardContent className="p-6">
-                <Quote
-                  size={24}
-                  className="text-secondary/20 mb-4"
-                />
+            <StaggerItem
+              key={item.id}
+              className="relative rounded-xl border border-muted/10 bg-surface p-8 transition-all duration-300 hover:shadow-lg hover:border-secondary/20"
+            >
+              {/* Large decorative gold quotation mark */}
+              <div className="absolute -top-3 left-6">
+                <span className="font-serif text-6xl text-secondary/20 leading-none select-none">
+                  &ldquo;
+                </span>
+              </div>
 
-                <p className="text-sm text-muted leading-relaxed mb-4">
-                  {getLocalizedField(item, "message", locale)}
-                </p>
+              {/* Quote text */}
+              <p className="font-serif text-lg text-primary/80 leading-relaxed mb-6 mt-4 italic">
+                {getLocalizedField(item, "message", locale)}
+              </p>
 
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-primary">
-                    {item.client_name}
-                  </span>
-                  {item.rating && (
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: item.rating }, (_, i) => (
-                        <Star
-                          key={i}
-                          size={14}
-                          className="fill-secondary text-secondary"
-                        />
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
+              {/* Bottom section */}
+              <div className="flex items-center justify-between pt-4 border-t border-muted/10">
+                <span className="text-sm font-semibold text-primary">
+                  {item.client_name}
+                </span>
+                {item.rating && (
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: item.rating }, (_, i) => (
+                      <Star
+                        key={i}
+                        size={14}
+                        className="fill-secondary text-secondary"
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Closing quotation mark */}
+              <div className="absolute -bottom-2 right-6">
+                <span className="font-serif text-6xl text-secondary/20 leading-none select-none">
+                  &rdquo;
+                </span>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </FadeInStagger>
       </div>
     </section>
   );

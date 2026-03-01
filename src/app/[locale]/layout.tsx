@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sarabun, Inter } from "next/font/google";
+import { Sarabun, Inter, Cormorant_Garamond } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -20,6 +20,14 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -65,7 +73,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${sarabun.variable} ${inter.variable}`}>
+    <html lang={locale} className={`${sarabun.variable} ${inter.variable} ${cormorant.variable}`}>
       <head>
         <script
           type="application/ld+json"

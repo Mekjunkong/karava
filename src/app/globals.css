@@ -5,6 +5,7 @@
   --color-primary-light: #4A4A4A;
   --color-secondary: #B8963E;
   --color-secondary-light: #D4B366;
+  --color-secondary-dark: #9A7A2E;
   --color-background: #FAF8F5;
   --color-surface: #FFFFFF;
   --color-muted: #7A7672;
@@ -58,4 +59,65 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary);
+}
+
+/* Serif font utility */
+.font-serif {
+  font-family: var(--font-cormorant);
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4B366 0%, #B8963E 50%, #9A7A2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold gradient border */
+.border-gold-gradient {
+  border-image: linear-gradient(135deg, #D4B366, #B8963E, #9A7A2E) 1;
+}
+
+/* Gold glow shadow */
+.shadow-gold {
+  box-shadow: 0 4px 20px rgba(184, 150, 62, 0.25);
+}
+
+.shadow-gold-lg {
+  box-shadow: 0 8px 40px rgba(184, 150, 62, 0.3);
+}
+
+/* Subtle pattern overlay */
+.bg-pattern {
+  background-image: radial-gradient(circle at 25px 25px, rgba(184, 150, 62, 0.03) 2%, transparent 0%),
+    radial-gradient(circle at 75px 75px, rgba(184, 150, 62, 0.03) 2%, transparent 0%);
+  background-size: 100px 100px;
+}
+
+/* Decorative gold line */
+.gold-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #B8963E, transparent);
+}
+
+.gold-line-left {
+  height: 2px;
+  background: linear-gradient(90deg, #B8963E, transparent);
+}
+
+/* Gold top border accent for cards */
+.card-gold-top {
+  position: relative;
+}
+
+.card-gold-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #D4B366, #B8963E, #9A7A2E);
+  border-radius: 12px 12px 0 0;
 }

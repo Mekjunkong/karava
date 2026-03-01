@@ -10,9 +10,26 @@ export function PackageCard({ pkg }: { pkg: Package }) {
   const t = useTranslations("packages");
   const locale = useLocale();
 
+  const isRecommended = pkg.slug === "standard";
+
   return (
-    <Card className="flex flex-col h-full">
-      <CardContent className="flex flex-col flex-1 p-6">
+    <Card
+      className={`flex flex-col h-full card-gold-top transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+        isRecommended
+          ? "border-secondary shadow-gold"
+          : "hover:border-secondary/30"
+      }`}
+    >
+      <CardContent className="flex flex-col flex-1 p-6 pt-8">
+        {/* Most Popular badge */}
+        {isRecommended && (
+          <div className="mb-4">
+            <span className="inline-flex items-center rounded-full bg-secondary px-3 py-0.5 text-xs font-semibold text-white">
+              {locale === "th" ? "แนะนำ" : "Most Popular"}
+            </span>
+          </div>
+        )}
+
         <div className="flex items-start justify-between mb-4">
           <div>
             <h3 className="text-xl font-semibold text-primary mb-1">
@@ -41,12 +58,12 @@ export function PackageCard({ pkg }: { pkg: Package }) {
           {pkg.base_price > 0 ? (
             <>
               <span className="text-xs text-muted">{t("startingAt")}</span>
-              <div className="text-2xl font-semibold text-secondary">
+              <div className="font-serif text-3xl font-semibold text-secondary tracking-wide">
                 {formatPrice(pkg.base_price)}
               </div>
             </>
           ) : (
-            <div className="text-lg font-semibold text-secondary">
+            <div className="font-serif text-xl font-semibold text-secondary">
               {t("customQuote")}
             </div>
           )}
@@ -54,7 +71,11 @@ export function PackageCard({ pkg }: { pkg: Package }) {
 
         <Link
           href={`/packages/${pkg.slug}`}
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-secondary text-white px-4 py-2.5 text-sm font-medium hover:bg-secondary-light transition-colors"
+          className={`inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
+            isRecommended
+              ? "bg-secondary text-white hover:bg-secondary-light shadow-gold hover:shadow-gold-lg"
+              : "bg-secondary text-white hover:bg-secondary-light"
+          }`}
         >
           {t("viewDetail")}
           <ArrowRight size={14} />

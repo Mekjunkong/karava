@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LanguageToggle } from "./language-toggle";
@@ -20,17 +20,33 @@ export function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-muted/10 bg-surface/95 backdrop-blur-sm">
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full transition-all duration-300",
+        scrolled
+          ? "bg-surface/98 backdrop-blur-md shadow-sm border-b border-muted/10"
+          : "bg-surface/80 backdrop-blur-sm border-b border-transparent"
+      )}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-primary">
+          <Link href="/" className="flex items-center gap-2.5">
+            <span className="font-serif text-2xl font-bold text-primary tracking-wide">
               คารวะ
             </span>
-            <span className="hidden sm:inline text-xs text-muted font-medium tracking-wider uppercase">
+            <span className="hidden sm:inline text-[10px] text-muted font-medium tracking-[0.25em] uppercase">
               Karava
             </span>
           </Link>
@@ -58,7 +74,7 @@ export function Header() {
             <LanguageToggle />
             <Link
               href="/contact"
-              className="hidden sm:inline-flex items-center rounded-lg bg-secondary px-5 py-2 text-sm font-medium text-white hover:bg-secondary-light transition-colors"
+              className="hidden sm:inline-flex items-center rounded-lg bg-secondary px-5 py-2 text-sm font-medium text-white hover:bg-secondary-light transition-all duration-300 shadow-sm hover:shadow-gold"
             >
               {t("inquire")}
             </Link>

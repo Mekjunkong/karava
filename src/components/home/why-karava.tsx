@@ -1,7 +1,10 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import {
   CheckCircle, Users, Globe, Banknote, Clock, MapPin,
 } from "lucide-react";
+import { FadeIn, FadeInStagger, StaggerItem } from "@/components/ui/motion";
 
 const items = [
   { key: "complete", icon: CheckCircle },
@@ -16,31 +19,42 @@ export function WhyKarava() {
   const t = useTranslations("whyKarava");
 
   return (
-    <section className="py-16 lg:py-24">
+    <section className="py-20 lg:py-32 relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-3">
+        <FadeIn className="text-center mb-16">
+          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent mx-auto mb-6" />
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4 tracking-wide">
             {t("title")}
           </h2>
-        </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {items.map(({ key, icon: Icon }) => (
-            <div key={key} className="flex gap-4">
-              <div className="shrink-0 w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
-                <Icon size={20} className="text-secondary" />
+            <StaggerItem
+              key={key}
+              className="group relative rounded-xl p-6 transition-all duration-300 hover:bg-surface hover:shadow-lg hover:border-secondary/10 border border-transparent"
+            >
+              {/* Large faded icon background */}
+              <div className="absolute top-4 right-4 opacity-[0.04] group-hover:opacity-[0.08] transition-opacity duration-300">
+                <Icon size={80} className="text-secondary" />
               </div>
-              <div>
-                <h3 className="font-semibold text-primary mb-1">
-                  {t(`items.${key}.title`)}
-                </h3>
-                <p className="text-sm text-muted leading-relaxed">
-                  {t(`items.${key}.description`)}
-                </p>
+
+              <div className="relative flex gap-4">
+                <div className="shrink-0 w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/15 transition-colors duration-300">
+                  <Icon size={22} className="text-secondary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-primary mb-2 text-lg">
+                    {t(`items.${key}.title`)}
+                  </h3>
+                  <p className="text-sm text-muted leading-relaxed">
+                    {t(`items.${key}.description`)}
+                  </p>
+                </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </FadeInStagger>
       </div>
     </section>
   );

@@ -14,11 +14,11 @@ export function ServiceCard({ service }: { service: Service }) {
   const t = useTranslations("services");
 
   return (
-    <Card>
+    <Card className="group transition-all duration-300 hover:border-secondary/20 hover:shadow-md card-gold-top">
       <CardContent className="p-5">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <h3 className="font-semibold text-primary mb-1">
+            <h3 className="font-semibold text-primary mb-1 group-hover:text-secondary transition-colors duration-300">
               {getLocalizedField(service, "name", locale)}
             </h3>
             <p className="text-sm text-muted leading-relaxed">
@@ -26,7 +26,7 @@ export function ServiceCard({ service }: { service: Service }) {
             </p>
           </div>
           <div className="text-right shrink-0 ml-4">
-            <div className="font-semibold text-secondary">
+            <div className="font-serif text-lg font-semibold text-secondary">
               {formatPrice(service.base_price)}
             </div>
             <span className="text-xs text-muted">
