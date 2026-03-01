@@ -1,25 +1,23 @@
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Hero } from "@/components/home/hero";
+import { PackagesOverview } from "@/components/home/packages-overview";
+import { ProcessSummary } from "@/components/home/process-summary";
+import { WhyKarava } from "@/components/home/why-karava";
+import { Testimonials } from "@/components/home/testimonials";
+import { InquiryCta } from "@/components/home/inquiry-cta";
 
 export default function HomePage() {
-  const t = useTranslations("hero");
+  // In production, these would be fetched from Supabase:
+  // const packages = await getActivePackages();
+  // const testimonials = await getFeaturedTestimonials();
 
   return (
     <div>
-      <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-6">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-primary mb-4">
-          {t("headline")}
-        </h1>
-        <p className="text-lg md:text-xl text-muted max-w-2xl mb-8">
-          {t("subheadline")}
-        </p>
-        <Link
-          href="/contact"
-          className="inline-block bg-secondary text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-secondary-light transition-colors"
-        >
-          {t("cta")}
-        </Link>
-      </section>
+      <Hero />
+      <PackagesOverview />
+      <ProcessSummary />
+      <WhyKarava />
+      <Testimonials />
+      <InquiryCta />
     </div>
   );
 }
