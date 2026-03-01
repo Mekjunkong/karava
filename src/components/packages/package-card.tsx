@@ -9,9 +9,9 @@ import Image from "next/image";
 
 const packageImages: Record<string, string> = {
   basic: "/images/lotus-white.jpg",
-  standard: "/images/temple-gold.jpg",
-  premium: "/images/buddha-gold.jpg",
-  custom: "/images/ceremony.jpg",
+  standard: "/images/pexels-white-flowers.jpg",
+  premium: "/images/pexels-candles-dark.jpg",
+  custom: "/images/pexels-ceremony.jpg",
 };
 
 export function PackageCard({ pkg }: { pkg: Package }) {

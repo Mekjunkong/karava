@@ -23,8 +23,8 @@ export function ProcessContent() {
       {/* Header banner with temple night photo */}
       <div className="relative h-[250px] md:h-[340px] overflow-hidden">
         <Image
-          src="/images/temple-night.jpg"
-          alt="Chiang Mai temple at dusk"
+          src="/images/lotus-white.jpg"
+          alt="Lotus flower on peaceful water"
           fill
           priority
           className="object-cover"

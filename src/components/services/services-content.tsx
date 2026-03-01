@@ -33,8 +33,8 @@ export function ServicesContent() {
       {/* Header banner with candles photo */}
       <div className="relative h-[250px] md:h-[340px] overflow-hidden">
         <Image
-          src="/images/candles.jpg"
-          alt="Candles atmosphere"
+          src="/images/pexels-candles-warm.jpg"
+          alt="Memorial candles ceremony"
           fill
           priority
           className="object-cover"

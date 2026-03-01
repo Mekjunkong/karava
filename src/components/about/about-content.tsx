@@ -22,8 +22,8 @@ export function AboutContent() {
       {/* Hero banner with monks photo */}
       <div className="relative h-[300px] md:h-[400px] overflow-hidden">
         <Image
-          src="/images/monks.jpg"
-          alt="Buddhist monks in Thailand"
+          src="/images/pexels-ceremony.jpg"
+          alt="Candle lighting ceremony"
           fill
           priority
           className="object-cover"
@@ -70,8 +70,8 @@ export function AboutContent() {
           <FadeIn className="mb-12" delay={0.1}>
             <div className="relative h-[200px] md:h-[280px] rounded-2xl overflow-hidden">
               <Image
-                src="/images/flowers-arrangement.jpg"
-                alt="Flower arrangement"
+                src="/images/white-flowers.jpg"
+                alt="Floral arrangement"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1280px) 100vw, 1280px"
