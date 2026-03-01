@@ -34,7 +34,7 @@ export function AdminSidebar() {
     <aside className="w-64 bg-primary min-h-screen flex flex-col shrink-0">
       <div className="p-6 border-b border-surface/10">
         <Link href="/admin" className="text-surface font-bold text-xl">
-          คารวะ
+          ศานติ
         </Link>
         <p className="text-surface/40 text-xs mt-1">{t("dashboard")}</p>
       </div>

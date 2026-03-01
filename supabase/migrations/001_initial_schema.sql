@@ -1,4 +1,4 @@
--- Karava (คารวะ) — Initial Database Schema
+-- Santi Funeral (ศานติ) — Initial Database Schema
 -- Run this in Supabase SQL Editor
 
 -- Packages (funeral packages)

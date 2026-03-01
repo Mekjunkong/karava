@@ -11,8 +11,8 @@ const fallbackTestimonials: Testimonial[] = [
   {
     id: "1",
     client_name: "คุณสมศรี ว.",
-    message_th: "ขอบคุณทีมคารวะที่ดูแลพิธีศพคุณแม่อย่างดีมาก ทุกอย่างเรียบร้อย ทีมงานใส่ใจทุกรายละเอียด ทำให้ครอบครัวเราสบายใจมาก",
-    message_en: "Thank you to the Karava team for taking such good care of our mother's ceremony. Everything was well-organized. The team paid attention to every detail.",
+    message_th: "ขอบคุณทีมศานติที่ดูแลพิธีศพคุณแม่อย่างดีมาก ทุกอย่างเรียบร้อย ทีมงานใส่ใจทุกรายละเอียด ทำให้ครอบครัวเราสบายใจมาก",
+    message_en: "Thank you to the Santi Funeral team for taking such good care of our mother's ceremony. Everything was well-organized. The team paid attention to every detail.",
     rating: 5,
     is_featured: true,
     created_at: "",
@@ -29,8 +29,8 @@ const fallbackTestimonials: Testimonial[] = [
   {
     id: "3",
     client_name: "คุณนิภา ส.",
-    message_th: "ในช่วงเวลาที่ยากลำบาก ทีมคารวะช่วยแบ่งเบาภาระได้มาก ดูแลทุกขั้นตอนจนเสร็จสิ้น ลอยอังคารที่แม่น้ำปิงสวยงามมาก",
-    message_en: "During a difficult time, the Karava team helped ease our burden tremendously. The ash floating at the Ping River was beautiful.",
+    message_th: "ในช่วงเวลาที่ยากลำบาก ทีมศานติช่วยแบ่งเบาภาระได้มาก ดูแลทุกขั้นตอนจนเสร็จสิ้น ลอยอังคารที่แม่น้ำปิงสวยงามมาก",
+    message_en: "During a difficult time, the Santi Funeral team helped ease our burden tremendously. The ash floating at the Ping River was beautiful.",
     rating: 5,
     is_featured: true,
     created_at: "",

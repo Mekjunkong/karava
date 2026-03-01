@@ -1,4 +1,4 @@
--- Karava (คารวะ) — Seed Data
+-- Santi Funeral (ศานติ) — Seed Data
 -- Run this in Supabase SQL Editor after running 001_initial_schema.sql
 
 -- ============================================
@@ -64,12 +64,12 @@ INSERT INTO services (slug, name_th, name_en, category, base_price, unit, descri
 -- ============================================
 
 INSERT INTO testimonials (client_name, message_th, message_en, rating, is_featured) VALUES
-('คุณสมศรี ว.', 'ขอบคุณทีมคารวะที่ดูแลพิธีศพคุณแม่อย่างดีมาก ทุกอย่างเรียบร้อย ทีมงานใส่ใจทุกรายละเอียด ทำให้ครอบครัวเราสบายใจมาก',
- 'Thank you to the Karava team for taking such good care of our mother''s ceremony. Everything was well-organized. The team paid attention to every detail and gave our family peace of mind.',
+('คุณสมศรี ว.', 'ขอบคุณทีมศานติที่ดูแลพิธีศพคุณแม่อย่างดีมาก ทุกอย่างเรียบร้อย ทีมงานใส่ใจทุกรายละเอียด ทำให้ครอบครัวเราสบายใจมาก',
+ 'Thank you to the Santi Funeral team for taking such good care of our mother''s ceremony. Everything was well-organized. The team paid attention to every detail and gave our family peace of mind.',
  5, true),
 ('คุณวิชัย พ.', 'ใช้บริการแพ็กเกจมาตรฐาน ราคาสมเหตุสมผล ไม่มีค่าใช้จ่ายเพิ่มเติมที่ไม่ได้แจ้งก่อน ทีมงานเป็นมืออาชีพมาก',
  'Used the Standard package. Fair pricing with no unexpected additional costs. The team was very professional.',
  5, true),
-('คุณนิภา ส.', 'ในช่วงเวลาที่ยากลำบาก ทีมคารวะช่วยแบ่งเบาภาระได้มาก ดูแลทุกขั้นตอนจนเสร็จสิ้น ลอยอังคารที่แม่น้ำปิงสวยงามมาก',
- 'During a difficult time, the Karava team helped ease our burden tremendously. They handled every step through completion. The ash floating at the Ping River was beautiful.',
+('คุณนิภา ส.', 'ในช่วงเวลาที่ยากลำบาก ทีมศานติช่วยแบ่งเบาภาระได้มาก ดูแลทุกขั้นตอนจนเสร็จสิ้น ลอยอังคารที่แม่น้ำปิงสวยงามมาก',
+ 'During a difficult time, the Santi Funeral team helped ease our burden tremendously. They handled every step through completion. The ash floating at the Ping River was beautiful.',
  5, true);

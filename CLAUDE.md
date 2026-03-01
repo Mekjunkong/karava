@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Karava (คารวะ) is a premium funeral service platform for Chiang Mai, Thailand. It's a bilingual (Thai/English) Next.js application with Supabase backend, deployed on Vercel.
+Santi Funeral (ศานติ) is a premium funeral service platform for Chiang Mai, Thailand. It's a bilingual (Thai/English) Next.js application with Supabase backend, deployed on Vercel.
 
 ## Commands
 
@@ -53,7 +53,7 @@ Database tables use `_th` / `_en` suffixed columns (e.g., `name_th`, `name_en`).
 ### Component Organization
 
 - `src/components/ui/` — Reusable primitives (Button, Card, Badge, Input, Logo, motion wrappers)
-- `src/components/home/` — Homepage sections (hero, packages-overview, process-summary, testimonials, why-karava, inquiry-cta)
+- `src/components/home/` — Homepage sections (hero, packages-overview, process-summary, testimonials, why-santi, inquiry-cta)
 - `src/components/layout/` — Header and Footer (shared across all pages)
 - `src/components/packages/` — Package card, inquiry form
 - `src/components/contact/` — Inquiry form, contact content

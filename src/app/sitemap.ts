@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://karava.co.th";
+const siteUrl = "https://santifuneral.com";
 
 const locales = ["th", "en"];
 const pages = [

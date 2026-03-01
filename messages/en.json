@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Karava | Complete Funeral Services Chiang Mai",
+    "title": "Santi Funeral | Complete Funeral Services Chiang Mai",
     "description": "Complete funeral services in Chiang Mai. All traditions and religions supported. Every farewell, with reverence.",
     "keywords": "funeral services Chiang Mai, funeral planning Thailand, Buddhist funeral, cremation services, expat funeral Thailand"
   },
@@ -116,8 +116,8 @@
       }
     }
   },
-  "whyKarava": {
-    "title": "Why Choose Karava",
+  "whySanti": {
+    "title": "Why Choose Santi Funeral",
     "items": {
       "complete": {
         "title": "Complete Service",
@@ -150,11 +150,11 @@
     "subtitle": "Trust from the families we have cared for"
   },
   "about": {
-    "title": "About Karava",
+    "title": "About Santi Funeral",
     "subtitle": "Every farewell, with reverence",
     "story": {
       "title": "Our Story",
-      "content": "Karava was founded with the commitment to provide professional, respectful, and fairly-priced funeral services for every family in Chiang Mai. We understand that loss is a difficult time, and we are here to ease the burden — caring for every detail so that families can grieve in peace."
+      "content": "Santi Funeral was founded with the commitment to provide professional, respectful, and fairly-priced funeral services for every family in Chiang Mai. We understand that loss is a difficult time, and we are here to ease the burden — caring for every detail so that families can grieve in peace."
     },
     "values": {
       "title": "Our Values",
@@ -205,7 +205,7 @@
       "line": "LINE",
       "lineId": "@mekgeo",
       "email": "Email",
-      "emailAddress": "info@karava.co.th",
+      "emailAddress": "info@santifuneral.com",
       "hours": "Hours",
       "hoursDetail": "Open 24 hours",
       "area": "Service Area",
@@ -224,7 +224,7 @@
     "contactUs": "Contact Us",
     "serviceArea": "Service Area",
     "serviceAreaDetail": "Chiang Mai and surrounding areas",
-    "copyright": "Copyright {year} Karava. All rights reserved."
+    "copyright": "Copyright {year} Santi Funeral. All rights reserved."
   },
   "common": {
     "baht": "THB",

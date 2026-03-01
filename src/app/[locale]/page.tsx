@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/hero";
 import { PackagesOverview } from "@/components/home/packages-overview";
 import { ProcessSummary } from "@/components/home/process-summary";
-import { WhyKarava } from "@/components/home/why-karava";
+import { WhySanti } from "@/components/home/why-santi";
 import { Testimonials } from "@/components/home/testimonials";
 import { InquiryCta } from "@/components/home/inquiry-cta";
 import { generatePageMetadata } from "@/lib/seo";
@@ -26,7 +26,7 @@ export default function HomePage() {
       <Hero />
       <PackagesOverview />
       <ProcessSummary />
-      <WhyKarava />
+      <WhySanti />
       <Testimonials />
       <InquiryCta />
     </div>

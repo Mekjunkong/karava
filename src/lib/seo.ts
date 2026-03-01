@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = "https://karava.co.th";
+const siteUrl = "https://santifuneral.com";
 
 interface PageSeoConfig {
   titleTh: string;
@@ -12,45 +12,45 @@ interface PageSeoConfig {
 
 const pageSeoConfigs: Record<string, PageSeoConfig> = {
   home: {
-    titleTh: "คารวะ | บริการจัดงานศพครบวงจร เชียงใหม่",
-    titleEn: "Karava | Complete Funeral Services Chiang Mai",
+    titleTh: "ศานติ | บริการจัดงานศพครบวงจร เชียงใหม่",
+    titleEn: "Santi Funeral | Complete Funeral Services Chiang Mai",
     descriptionTh: "บริการจัดงานศพครบวงจร เชียงใหม่ รองรับทุกศาสนาและประเพณี ดูแลทุกพิธีด้วยความเคารพ ราคาโปร่งใส พร้อมให้คำปรึกษา 24 ชม.",
     descriptionEn: "Complete funeral services in Chiang Mai. All traditions supported. Every farewell, with reverence. Transparent pricing. 24/7 consultation.",
     path: "",
   },
   packages: {
-    titleTh: "แพ็กเกจงานศพ | คารวะ เชียงใหม่",
-    titleEn: "Funeral Packages | Karava Chiang Mai",
+    titleTh: "แพ็กเกจงานศพ | ศานติ เชียงใหม่",
+    titleEn: "Funeral Packages | Santi Funeral Chiang Mai",
     descriptionTh: "แพ็กเกจจัดงานศพ เชียงใหม่ เริ่มต้น 79,000 บาท รองรับพุทธ คริสต์ จีน ไม่ระบุศาสนา หรือกำหนดเอง",
     descriptionEn: "Funeral packages in Chiang Mai starting from 79,000 THB. Buddhist, Christian, Chinese, secular, or custom ceremonies.",
     path: "/packages",
   },
   services: {
-    titleTh: "บริการเสริมงานศพ | คารวะ เชียงใหม่",
-    titleEn: "Funeral Add-on Services | Karava Chiang Mai",
+    titleTh: "บริการเสริมงานศพ | ศานติ เชียงใหม่",
+    titleEn: "Funeral Add-on Services | Santi Funeral Chiang Mai",
     descriptionTh: "บริการเสริมสำหรับงานศพ เชียงใหม่ ช่างภาพ ดอกไม้ อาหาร รถรับ-ส่ง ของที่ระลึก และอื่นๆ",
     descriptionEn: "Funeral add-on services in Chiang Mai. Photography, flowers, catering, transport, memorial keepsakes, and more.",
     path: "/services",
   },
   process: {
-    titleTh: "ขั้นตอนจัดงานศพ 13 ขั้นตอน | คารวะ เชียงใหม่",
-    titleEn: "13-Step Funeral Process | Karava Chiang Mai",
+    titleTh: "ขั้นตอนจัดงานศพ 13 ขั้นตอน | ศานติ เชียงใหม่",
+    titleEn: "13-Step Funeral Process | Santi Funeral Chiang Mai",
     descriptionTh: "ขั้นตอนจัดงานศพครบวงจร 13 ขั้นตอน ตั้งแต่ปรึกษา รับเรื่อง จนถึงลอยอังคาร ดูแลทุกรายละเอียด",
     descriptionEn: "Complete 13-step funeral process from consultation to ash floating. Every detail handled with care.",
     path: "/process",
   },
   about: {
-    titleTh: "เกี่ยวกับคารวะ | บริษัทจัดงานศพ เชียงใหม่",
-    titleEn: "About Karava | Funeral Service Provider Chiang Mai",
-    descriptionTh: "คารวะ บริการจัดงานศพครบวงจร เชียงใหม่ ดูแลทุกพิธีด้วยความเคารพ ทีมงานมืออาชีพ ราคาโปร่งใส",
-    descriptionEn: "Karava provides complete funeral services in Chiang Mai. Professional team, transparent pricing, all traditions supported.",
+    titleTh: "เกี่ยวกับศานติ | บริษัทจัดงานศพ เชียงใหม่",
+    titleEn: "About Santi Funeral | Funeral Service Provider Chiang Mai",
+    descriptionTh: "ศานติ บริการจัดงานศพครบวงจร เชียงใหม่ ดูแลทุกพิธีด้วยความเคารพ ทีมงานมืออาชีพ ราคาโปร่งใส",
+    descriptionEn: "Santi Funeral provides complete funeral services in Chiang Mai. Professional team, transparent pricing, all traditions supported.",
     path: "/about",
   },
   contact: {
-    titleTh: "ติดต่อจัดงานศพ | คารวะ เชียงใหม่",
-    titleEn: "Contact for Funeral Services | Karava Chiang Mai",
+    titleTh: "ติดต่อจัดงานศพ | ศานติ เชียงใหม่",
+    titleEn: "Contact for Funeral Services | Santi Funeral Chiang Mai",
     descriptionTh: "ติดต่อสอบถามบริการจัดงานศพ เชียงใหม่ พร้อมให้คำปรึกษา 24 ชม. โทร LINE อีเมล",
-    descriptionEn: "Contact Karava for funeral services in Chiang Mai. 24/7 consultation. Phone, LINE, email.",
+    descriptionEn: "Contact Santi Funeral for funeral services in Chiang Mai. 24/7 consultation. Phone, LINE, email.",
     path: "/contact",
   },
 };
@@ -80,7 +80,7 @@ export function generatePageMetadata(
       title,
       description,
       url,
-      siteName: "Karava (คารวะ)",
+      siteName: "Santi Funeral (ศานติ)",
       locale: locale === "th" ? "th_TH" : "en_US",
       type: "website",
       images: [
@@ -88,7 +88,7 @@ export function generatePageMetadata(
           url: `${siteUrl}/og-image.png`,
           width: 1200,
           height: 630,
-          alt: "Karava - คารวะ",
+          alt: "Santi Funeral - ศานติ",
         },
       ],
     },
@@ -104,12 +104,12 @@ export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "FuneralHome",
-    name: "คารวะ (Karava)",
-    alternateName: "Karava Funeral Services",
+    name: "ศานติ (Santi Funeral)",
+    alternateName: "Santi Funeral Services",
     description: "บริการจัดงานศพครบวงจร เชียงใหม่ รองรับทุกศาสนาและประเพณี",
     url: siteUrl,
     telephone: "+66929894495",
-    email: "info@karava.co.th",
+    email: "info@santifuneral.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Chiang Mai",
@@ -151,7 +151,7 @@ export function funeralServiceJsonLd() {
     serviceType: "Funeral Service",
     provider: {
       "@type": "FuneralHome",
-      name: "คารวะ (Karava)",
+      name: "ศานติ (Santi Funeral)",
       url: siteUrl,
     },
     areaServed: {

@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Pencil, UserX, UserCheck } from "lucide-react";
 
 const sampleStaff = [
-  { id: "s1", name: "คุณสมศักดิ์ ดี", role: "admin", phone: "081-111-1111", email: "somsak@karava.co.th", is_active: true },
-  { id: "s2", name: "คุณวรรณา สุข", role: "coordinator", phone: "082-222-2222", email: "wanna@karava.co.th", is_active: true },
-  { id: "s3", name: "คุณชาตรี กล้า", role: "coordinator", phone: "083-333-3333", email: "chatri@karava.co.th", is_active: true },
+  { id: "s1", name: "คุณสมศักดิ์ ดี", role: "admin", phone: "081-111-1111", email: "somsak@santifuneral.com", is_active: true },
+  { id: "s2", name: "คุณวรรณา สุข", role: "coordinator", phone: "082-222-2222", email: "wanna@santifuneral.com", is_active: true },
+  { id: "s3", name: "คุณชาตรี กล้า", role: "coordinator", phone: "083-333-3333", email: "chatri@santifuneral.com", is_active: true },
   { id: "s4", name: "คุณสมพร มั่น", role: "driver", phone: "084-444-4444", email: null, is_active: true },
   { id: "s5", name: "คุณประสิทธิ์ เจริญ", role: "driver", phone: "085-555-5555", email: null, is_active: false },
 ];

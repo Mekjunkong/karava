@@ -122,13 +122,13 @@ export function Logo({
           className="font-serif text-2xl font-bold tracking-wide leading-none"
           style={{ color: colors.text }}
         >
-          {"\u0E04\u0E32\u0E23\u0E27\u0E30"}
+          {"\u0E28\u0E32\u0E19\u0E15\u0E34"}
         </span>
         <span
           className="text-[10px] font-medium tracking-[0.3em] uppercase leading-none mt-1"
           style={{ color: colors.subtext }}
         >
-          KARAVA
+          SANTI FUNERAL
         </span>
       </div>
     );
@@ -143,13 +143,13 @@ export function Logo({
           className="font-serif text-2xl font-bold tracking-wide leading-none"
           style={{ color: colors.text }}
         >
-          {"\u0E04\u0E32\u0E23\u0E27\u0E30"}
+          {"\u0E28\u0E32\u0E19\u0E15\u0E34"}
         </span>
         <span
           className="text-[10px] font-medium tracking-[0.3em] uppercase leading-none mt-1"
           style={{ color: colors.subtext }}
         >
-          KARAVA
+          SANTI FUNERAL
         </span>
       </div>
     </div>

@@ -101,7 +101,7 @@ export function ContactContent() {
                       {t("info.email")}
                     </h3>
                     <a
-                      href="mailto:info@karava.co.th"
+                      href="mailto:info@santifuneral.com"
                       className="text-secondary hover:text-secondary-light transition-colors"
                     >
                       {t("info.emailAddress")}

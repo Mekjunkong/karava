@@ -33,21 +33,21 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | คารวะ (Karava)",
-    default: "คารวะ | บริการจัดงานศพครบวงจร เชียงใหม่",
+    template: "%s | ศานติ (Santi Funeral)",
+    default: "ศานติ | บริการจัดงานศพครบวงจร เชียงใหม่",
   },
   description:
     "บริการจัดงานศพครบวงจร เชียงใหม่ รองรับทุกศาสนาและประเพณี ดูแลทุกพิธีด้วยความเคารพ",
-  metadataBase: new URL("https://karava.co.th"),
+  metadataBase: new URL("https://santifuneral.com"),
   openGraph: {
     type: "website",
-    siteName: "Karava (คารวะ)",
+    siteName: "Santi Funeral (ศานติ)",
     images: [
       {
         url: "/images/hero-temple.jpg",
         width: 1920,
         height: 1440,
-        alt: "Karava - คารวะ - บริการจัดงานศพ เชียงใหม่",
+        alt: "Santi Funeral - ศานติ - บริการจัดงานศพ เชียงใหม่",
       },
     ],
   },

@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
       <Card className="w-full max-w-md">
         <CardContent className="p-8">
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-bold text-primary mb-1">คารวะ</h1>
+            <h1 className="text-2xl font-bold text-primary mb-1">ศานติ</h1>
             <p className="text-muted text-sm">{t("title")}</p>
           </div>
 

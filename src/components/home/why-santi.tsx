@@ -15,8 +15,8 @@ const items = [
   { key: "chiangmai", icon: MapPin },
 ] as const;
 
-export function WhyKarava() {
-  const t = useTranslations("whyKarava");
+export function WhySanti() {
+  const t = useTranslations("whySanti");
 
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden">
