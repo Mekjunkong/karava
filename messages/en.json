@@ -1,0 +1,310 @@
+{
+  "metadata": {
+    "title": "Karava | Complete Funeral Services Chiang Mai",
+    "description": "Complete funeral services in Chiang Mai. All traditions and religions supported. Every farewell, with reverence.",
+    "keywords": "funeral services Chiang Mai, funeral planning Thailand, Buddhist funeral, cremation services, expat funeral Thailand"
+  },
+  "nav": {
+    "home": "Home",
+    "packages": "Packages",
+    "services": "Add-on Services",
+    "process": "Our Process",
+    "about": "About Us",
+    "contact": "Contact",
+    "inquire": "Inquire",
+    "admin": "Admin"
+  },
+  "hero": {
+    "headline": "Every farewell, with reverence",
+    "subheadline": "Complete funeral services in Chiang Mai — all traditions and religions supported",
+    "cta": "Inquire about our services",
+    "phone": "Call 0XX-XXX-XXXX",
+    "available": "Available 24 hours"
+  },
+  "packages": {
+    "title": "Service Packages",
+    "subtitle": "Choose the package that fits your needs",
+    "startingAt": "Starting at",
+    "nights": "nights",
+    "viewDetail": "View Details",
+    "viewAll": "View All Packages",
+    "includes": "What's Included",
+    "inquireAbout": "Inquire about this package",
+    "customQuote": "Request a quote",
+    "relatedPackages": "Other Packages",
+    "filter": {
+      "all": "All",
+      "buddhist": "Buddhist",
+      "christian": "Christian",
+      "chinese": "Chinese",
+      "secular": "Secular",
+      "custom": "Custom"
+    }
+  },
+  "services": {
+    "title": "Add-on Services",
+    "subtitle": "Choose additional services to fit your needs",
+    "perEvent": "per event",
+    "perDay": "per day",
+    "perPerson": "per person",
+    "categories": {
+      "transport": "Transport",
+      "ceremony": "Ceremony",
+      "supplies": "Supplies",
+      "venue": "Venue",
+      "catering": "Food & Beverage",
+      "photography": "Photo/Video",
+      "memorial": "Memorial"
+    }
+  },
+  "process": {
+    "title": "Our Service Process",
+    "subtitle": "13 steps of comprehensive funeral care",
+    "viewAll": "View All Steps",
+    "steps": {
+      "1": {
+        "name": "Consultation & Intake",
+        "description": "We listen to the family's needs, provide guidance on ceremonies, packages, and budget."
+      },
+      "2": {
+        "name": "Venue/Temple Booking",
+        "description": "We coordinate temple hall or venue reservation based on family's preference."
+      },
+      "3": {
+        "name": "Body Collection",
+        "description": "Respectful collection of the deceased from hospital or designated location."
+      },
+      "4": {
+        "name": "Coffin Preparation",
+        "description": "Coffin preparation and dignified decoration."
+      },
+      "5": {
+        "name": "Water Blessing Ceremony",
+        "description": "Traditional water blessing ceremony for family and loved ones to pay respects."
+      },
+      "6": {
+        "name": "Coffin Flower Arrangement",
+        "description": "Beautiful floral arrangement for the coffin front, within the chosen budget."
+      },
+      "7": {
+        "name": "Merit Items Preparation",
+        "description": "Preparation of merit-making items for offering to monks during chanting."
+      },
+      "8": {
+        "name": "Nightly Chanting",
+        "description": "Monks invited for nightly Buddhist chanting for the designated evenings."
+      },
+      "9": {
+        "name": "Morning Merit Ceremony",
+        "description": "Morning alms and merit ceremony with food offerings to monks."
+      },
+      "10": {
+        "name": "Cremation Ceremony",
+        "description": "Dignified cremation ceremony with full oversight through completion."
+      },
+      "11": {
+        "name": "Ash Collection",
+        "description": "Careful collection and placement of ashes in the chosen container."
+      },
+      "12": {
+        "name": "Ash Floating",
+        "description": "Ash floating ceremony at the Ping River, conducted with reverence."
+      },
+      "13": {
+        "name": "Handover & Follow-up",
+        "description": "Complete handover of all items and post-ceremony follow-up care."
+      }
+    }
+  },
+  "whyKarava": {
+    "title": "Why Choose Karava",
+    "items": {
+      "complete": {
+        "title": "Complete Service",
+        "description": "We handle everything from intake to ash floating."
+      },
+      "professional": {
+        "title": "Professional Team",
+        "description": "An experienced team that cares with compassion."
+      },
+      "allTraditions": {
+        "title": "All Traditions",
+        "description": "Buddhist, Christian, Chinese, secular, or custom."
+      },
+      "transparent": {
+        "title": "Transparent Pricing",
+        "description": "Clear pricing with no hidden costs."
+      },
+      "available": {
+        "title": "24/7 Availability",
+        "description": "Consultation and service available around the clock."
+      },
+      "chiangmai": {
+        "title": "Chiang Mai Coverage",
+        "description": "Serving Chiang Mai and surrounding areas."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "From the Families We Serve",
+    "subtitle": "Trust from the families we have cared for"
+  },
+  "about": {
+    "title": "About Karava",
+    "subtitle": "Every farewell, with reverence",
+    "story": {
+      "title": "Our Story",
+      "content": "Karava was founded with the commitment to provide professional, respectful, and fairly-priced funeral services for every family in Chiang Mai. We understand that loss is a difficult time, and we are here to ease the burden — caring for every detail so that families can grieve in peace."
+    },
+    "values": {
+      "title": "Our Values",
+      "respect": {
+        "title": "Respect",
+        "description": "Every ceremony is conducted with respect for the deceased and their family."
+      },
+      "care": {
+        "title": "Care",
+        "description": "Attention to every detail, as if caring for our own family."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Clear pricing and details with no hidden costs."
+      }
+    },
+    "coverage": {
+      "title": "Service Area",
+      "description": "Chiang Mai and surrounding areas"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to help. Contact us anytime.",
+    "form": {
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email (optional)",
+      "lineId": "LINE ID (optional)",
+      "tradition": "Religion/Tradition",
+      "deceasedName": "Deceased Name (optional)",
+      "relation": "Relation to the deceased",
+      "preferredDate": "Preferred Ceremony Date",
+      "estimatedGuests": "Estimated Number of Guests",
+      "package": "Package of Interest",
+      "message": "Additional Message",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "required": "Required"
+    },
+    "success": {
+      "title": "Thank you for reaching out",
+      "message": "We have received your information. A team member will contact you within 30 minutes."
+    },
+    "info": {
+      "phone": "Phone",
+      "phoneNumber": "0XX-XXX-XXXX",
+      "line": "LINE",
+      "lineId": "@karava",
+      "email": "Email",
+      "emailAddress": "info@karava.co.th",
+      "hours": "Hours",
+      "hoursDetail": "Open 24 hours",
+      "area": "Service Area",
+      "areaDetail": "Chiang Mai and surrounding areas"
+    }
+  },
+  "inquiryCta": {
+    "title": "Ready to Help",
+    "subtitle": "Contact us anytime. Our team is available 24 hours.",
+    "phone": "Call 0XX-XXX-XXXX",
+    "line": "LINE: @karava"
+  },
+  "footer": {
+    "tagline": "Every farewell, with reverence",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "serviceArea": "Service Area",
+    "serviceAreaDetail": "Chiang Mai and surrounding areas",
+    "copyright": "Copyright {year} Karava. All rights reserved."
+  },
+  "common": {
+    "baht": "THB",
+    "learnMore": "Learn More",
+    "back": "Back",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try again",
+    "noData": "No data available"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "inquiries": "Inquiries",
+      "orders": "Orders",
+      "packages": "Packages",
+      "services": "Services",
+      "staff": "Staff",
+      "logout": "Logout"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "newInquiries": "New Inquiries Today",
+      "activeOrders": "Active Orders",
+      "upcomingCeremonies": "Upcoming Ceremonies",
+      "completedThisMonth": "Completed This Month",
+      "recentInquiries": "Recent Inquiries",
+      "upcomingCeremoniesList": "Upcoming Ceremonies"
+    },
+    "inquiries": {
+      "title": "Inquiries",
+      "status": {
+        "new": "New",
+        "contacted": "Contacted",
+        "quoted": "Quoted",
+        "confirmed": "Confirmed",
+        "cancelled": "Cancelled"
+      },
+      "assignStaff": "Assign",
+      "convertToOrder": "Create Order"
+    },
+    "orders": {
+      "title": "Orders",
+      "status": {
+        "received": "Received",
+        "preparing": "Preparing",
+        "ceremony": "Ceremony",
+        "completed": "Completed"
+      },
+      "timeline": "Timeline Steps",
+      "details": "Order Details"
+    },
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "error": "Invalid email or password"
+    },
+    "packages": {
+      "title": "Manage Packages",
+      "create": "Create Package",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "services": {
+      "title": "Manage Services",
+      "create": "Create Service",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "staff": {
+      "title": "Manage Staff",
+      "create": "Add Member",
+      "role": {
+        "admin": "Admin",
+        "coordinator": "Coordinator",
+        "driver": "Driver"
+      }
+    }
+  }
+}
