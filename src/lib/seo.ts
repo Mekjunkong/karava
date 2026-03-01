@@ -65,7 +65,6 @@ export function generatePageMetadata(
   const title = locale === "en" ? config.titleEn : config.titleTh;
   const description = locale === "en" ? config.descriptionEn : config.descriptionTh;
   const url = `${siteUrl}/${locale}${config.path}`;
-  const alternateUrl = `${siteUrl}/${locale === "th" ? "en" : "th"}${config.path}`;
 
   return {
     title,

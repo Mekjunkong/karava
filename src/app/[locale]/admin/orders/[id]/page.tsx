@@ -29,9 +29,9 @@ const sampleOrder = {
 };
 
 export default function OrderDetailPage() {
-  const params = useParams();
+  const _params = useParams();
   const t = useTranslations("admin.orders");
-  const order = sampleOrder; // In production: fetch by params.id
+  const order = sampleOrder; // In production: fetch by _params.id
 
   const statusVariants: Record<string, "secondary" | "warning" | "default" | "success"> = {
     received: "secondary",

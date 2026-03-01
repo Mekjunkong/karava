@@ -5,7 +5,7 @@ import { ProcessSummary } from "@/components/home/process-summary";
 import { WhyKarava } from "@/components/home/why-karava";
 import { Testimonials } from "@/components/home/testimonials";
 import { InquiryCta } from "@/components/home/inquiry-cta";
-import { generatePageMetadata, funeralServiceJsonLd } from "@/lib/seo";
+import { generatePageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,

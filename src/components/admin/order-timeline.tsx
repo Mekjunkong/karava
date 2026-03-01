@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Check, Clock, Play } from "lucide-react";
 
